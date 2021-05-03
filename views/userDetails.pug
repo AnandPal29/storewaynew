@@ -1,0 +1,29 @@
+doctype html
+head
+  title Products
+  link(rel='stylesheet' href='/css/style.css')
+include _header
+.detailsPage
+  .detailsPage--container
+    form.form.detailsForm
+      .form__group
+        label(for='productId') User Id
+        input#userId(type='text' value=`${user._id}` readonly)
+      .form__group
+        label(for='firstName') First Name
+        input#firstName(type='text' value=`${user.firstName}` readonly)
+      .form__group
+        label(for='lastName') Last  Name
+        input#lastName(type='text' value=`${user.lastName}` readonly)
+      .form__group
+        label(for='email') Email 
+        input#email(type='text' value=`${user.email}` readonly)
+      .form__group
+        label(for='phoneNumber') Phonne Number 
+        input#phoneNumber(type='text' value=`${user.phoneNumber}` readonly)
+        button.btn.deactivateBtn Deactivate User
+        button.btn.activateBtn Activate User
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js')      
+script(src='/js/logout.js')
+script(src='/js/updateUser.js')
+script(src='/js/alert.js')

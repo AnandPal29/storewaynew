@@ -1,0 +1,33 @@
+head
+  link(rel='stylesheet' href='/css/style.css')
+include _header
+.productpage
+  section.search__Container
+    .header__container
+      input#searchBox(type="text")
+      button.btn.searchBtn1 Search 
+    .header__container
+      select.form__group#category
+        option(value='snacks') Snacks
+        option(value='personalCare') Personal Care
+        option(value='grocery') Grocery
+        option(value='vegetablesAndFruits') Vegetables And Fruits
+        option(value='householdItems') Household Items
+        option(value='beverages') Beverages
+        option(value='breakfastAndDairy') BreakFast And Dairy
+      button.btn.searchBtn2 Search 
+  section.product__container
+    for product in products 
+      .product__card
+        img.product__card--img(src=`/uploads/${product.productImage}` alt='product image')
+        h1.product__card--heading=product.name
+        .product__card--footer
+          ul
+            li Price: &#x20B9; #{product.price}
+            li Category: #{product.category}
+            li Quantity: #{product.quantity}#{product.unit}
+        a.product__card--link(href=`/productDetails/${product.slug}`) See Details
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js')
+script(src='/js/logout.js')
+script(src='/js/search.js')
+script(src='/js/alert.js')

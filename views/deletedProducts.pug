@@ -1,0 +1,21 @@
+head
+  link(rel='stylesheet' href='/css/style.css')
+include _header
+.productpage
+  section.product__container
+    for product in products 
+      .product__card
+        img.product__card--img(src=`/uploads/${product.productImage}` alt='product image')
+        h1.product__card--heading=product.name
+        .product__card--footer
+          ul
+            li#productId #{product._id}
+            li Price: &#x20B9; #{product.price}
+            li Category: #{product.category}
+            li Quantity: #{product.quantity}#{product.unit}
+        a.product__card--link(href=`/productDetails/${product.slug}`) See Details
+        a.product__card--link.activateBtn Activate Product
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js')
+script(src='/js/logout.js')
+script(src='/js/activateProduct.js')
+script(src='/js/alert.js')

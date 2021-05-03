@@ -1,0 +1,12 @@
+.heading {
+  &__primary {
+    font-size: 3rem;
+    color: $color-primary;
+    margin: 1rem;
+  }
+  &__secondary {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: $color-grey-dark-2;
+  }
+}

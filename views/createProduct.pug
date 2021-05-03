@@ -1,0 +1,53 @@
+head
+  link(rel='stylesheet' href='css/style.css')
+include _header
+.detailsPage
+  .detailsPage--container
+    form.form.createProductForm
+      .form__group
+        label(for='name') Product Name
+        input#name(type='text' autocomplete="off")
+      .form__group
+        label(for='price') Product Price
+        input#price(type='text' autocomplete="off")
+      .form__group
+        label(for='quantity') Product Quantity
+        select#quantity
+          option(value='100') 100
+          option(value='250') 250
+          option(value='500') 500
+          option(value='1') 1
+          option(value='2') 2
+          option(value='2.5') 2.5
+          option(value='5') 5
+      .form__group
+        label(for='unit') Unit
+        select#unit
+          option(value='gm') gm
+          option(value='kg') kg
+          option(value='ml') ml
+          option(value='litre') litre
+      .form__group
+        label(for='category') Category
+        select#category
+          option(value='grocery') Grocery
+          option(value='vegetablesAndFruits') Vegetables And Fruits
+          option(value='personalCare') Personal Care
+          option(value='householdItems') Household Items 
+          option(value='snacks') Snacks 
+          option(value='beverages') Beverages 
+          option(value='babyCare') Baby Care 
+          option(value='breakfastAndDairy') Breakfast and Dairy
+      .form__group
+        label(for='inStock') In Stock
+        input#inStock(type='text' autocomplete="off")
+      .form__group
+        label(for='productImage') Product Image
+        input#productImage(type='file')
+      .form__group
+        button.btn Submit
+
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js')
+script(src='/js/alert.js')
+script(src='/js/createProduct.js')
+script(src='/js/logout.js')

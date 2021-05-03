@@ -1,0 +1,87 @@
+.product {
+  &__menu {
+    background-color: $color-white;
+    width: 90%;
+    margin: 2rem auto;
+    border-radius: 5px;
+    padding: 1rem;
+
+    ul {
+      list-style: none;
+      padding: 1rem;
+      display: flex;
+      li {
+        font-size: 1.4rem;
+        margin: 0 1rem;
+
+        a {
+          text-decoration: none;
+          color: $color-grey-dark;
+        }
+      }
+    }
+  }
+  &__container {
+    background-color: $color-white;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 3rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    width: 30%;
+    //border: 1px solid $color-primary;
+    border-radius: 5px;
+    margin: 2rem 0;
+    padding: 2rem;
+    box-shadow: 2px 2px 4px $color-grey-dark-1;
+
+    &--img {
+      width: 50%;
+      height: 200px;
+      display: block;
+      margin: 1rem auto;
+    }
+
+    &--heading {
+      font-size: 1.7rem;
+      padding: 1rem;
+      color: $color-grey-dark-2;
+    }
+
+    &--link {
+      font-size: 1.7rem;
+      text-decoration: none;
+      display: block;
+      background-color: $color-primary;
+      color: $color-grey-light-1;
+      border-radius: 5px;
+      padding: 1rem;
+      text-align: center;
+      margin: 1rem;
+      border: 1px solid $color-white;
+      &:hover {
+        background-color: $color-white;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+      }
+    }
+
+    &--footer {
+      padding: 0.5rem 1rem;
+      ul {
+        list-style: none;
+
+        li {
+          font-size: 1.5rem;
+          margin: 0.5rem 0;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}

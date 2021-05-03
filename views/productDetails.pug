@@ -1,0 +1,70 @@
+doctype html
+head
+  title Products
+  link(rel='stylesheet' href='/css/style.css')
+include _header
+.detailsPage
+  .detailsPage--container
+    img.detailsPage--img(src=`/uploads/${product.productImage}` alt='')
+    form
+      //- .form__group
+      //-   label(for='name') Product Name
+      //-   input#name(type='text' value=`${product.name}` readonly)
+      .form__group
+        input#productImage(type='file' value=`${productImage}`)
+      .form__group
+        button.btn.updateImgBtn Update Image
+  .detailsPage--container
+    form.form.detailsForm
+      .form__group
+        label(for='productId') Product Id
+        input#productId(type='text' value=`${product.id}` readonly)
+      .form__group
+        label(for='name') Product Name
+        input#name(type='text' value=`${product.name}`)
+      .form__group
+        label(for='inOffer') inOffer
+        select#inOffer
+          option(value=`${product.inOffer}` selected hidden) #{product.inOffer}
+          option(value = new Boolean(true)) true
+          option(value=false) false
+      .form__group
+        label(for='price') Product Price
+        input#price(type='text' value=`${product.price}`)
+      .form__group
+        label(for='quantity') Product Quantity
+        select#quantity
+          option(value=`${product.quantity}` selected hidden) #{product.quantity}
+          option(value='100') 100
+          option(value='250') 250
+          option(value='500') 500
+          option(value='1') 1
+          option(value='2') 2
+          option(value='2.5') 2.5
+          option(value='5') 5
+      .form__group
+        label(for='unit') Unit
+        select#unit
+          option(value=`${product.unit}` selected hidden) #{product.unit}
+          option(value='gm') gm
+          option(value='kg') kg
+          option(value='ml') ml
+          option(value='l') l
+      .form__group
+        label(for='category') Category
+        select#category
+          option(value=`${product.category}` selected hidden) #{product.category}
+          option(value='snacks') snacks
+          option(value='personalCare') personalCare
+          option(value='grocery') grocery
+          option(value='vegetablesAndFruits') vegetablesAndFruits
+      .form__group
+        label(for='inStock') In Stock
+        input#inStock(type='text' value=`${product.inStock}`)
+      .form__group
+        button.btn.updateBtn Update
+        button.btn.deleteBtn Delete
+script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js')      
+script(src='/js/logout.js')
+script(src='/js/updateProduct.js')
+script(src='/js/alert.js')

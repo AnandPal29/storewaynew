@@ -1,0 +1,33 @@
+$color-primary-dark: #df006d;
+$color-primary: #fa4ca1;
+$color-primary-light: #fe62af;
+
+$color-grey-dark: #777;
+$color-grey-dark-1: #999;
+$color-grey-dark-2: #333;
+$color-white: #fff;
+$color-black: #000;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background-color: $color-grey-light-2;
+}
+
+.section__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

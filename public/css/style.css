@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body {
+  padding: 2rem; }
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 9999;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1.6rem 15rem;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25); }
+
+.alert--success {
+  background-color: #20bf6b; }
+
+.alert--error {
+  background-color: #eb4d4b; }
+
+.productpage {
+  background-color: whitesmoke;
+  min-height: 90vh;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background-image: linear-gradient(to right, #8360c3, #2ebf91); }
+
+.product-img {
+  display: block;
+  width: 35%;
+  padding: 4rem;
+  border-radius: 50%; }
+
+.product__container {
+  width: 90%;
+  margin: 2rem auto;
+  padding: 3rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+.product__card {
+  width: 20%;
+  border-radius: 5px;
+  margin: 2rem 1rem;
+  padding: 1rem;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  transition: all 0.5s; }
+  .product__card--img {
+    width: 30%;
+    height: 100px;
+    display: block;
+    margin: 1rem auto; }
+  .product__card--heading {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: black; }
+  .product__card--link {
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: block;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+    border: 1px solid; }
+    .product__card--link:hover {
+      background-color: white;
+      color: #333;
+      border: 1px solid; }
+  .product__card--footer {
+    padding: 0.5rem 1rem; }
+    .product__card--footer ul {
+      list-style: none; }
+      .product__card--footer ul li {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        font-style: italic; }
+  .product__card:hover {
+    transform: scale(1.1); }
+
+.form {
+  background-color: white;
+  display: block;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  margin: 0 auto; }
+  .form__group {
+    padding: .5rem;
+    margin: .5rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .form__group label {
+      display: block; }
+    .form__group input, .form__group select {
+      padding: 1rem;
+      font-size: 1.75rem;
+      outline: none;
+      border: none;
+      color: #777;
+      background-color: whitesmoke; }
+      .form__group input:active, .form__group select:active {
+        border-bottom: 2px solid #333; }
+      .form__group input:focus, .form__group select:focus {
+        border-bottom: 2px solid #333; }
+
+.btn {
+  padding: 1rem;
+  background-color: #333;
+  border: none;
+  color: wheat;
+  font-weight: 700;
+  cursor: pointer;
+  margin: .5rem 0; }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); }
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial; }
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; }
+
+/* The dropdown container */
+.dropdown {
+  float: right;
+  overflow: hidden;
+  margin-right: 3rem; }
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  /* Important for vertical align on mobile phones */
+  margin: 0;
+  /* Important for vertical align on mobile phones */ }
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #28527a; }
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left; }
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd; }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block; }
+
+.header {
+  padding: 3rem; }
+
+.home {
+  max-width: 114rem;
+  background-color: white; }
+
+.detailsPage {
+  background-image: linear-gradient(to right, #8360c3, #2ebf91);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem; }
+  .detailsPage--container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;}
+  .detailsPage--img {
+    display: block;
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    margin: 1rem; }
+
+.loginPage {
+  background-image: linear-gradient(to right, #8360c3, #2ebf91);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .loginPage--container {
+    width: 30%; }
+  .loginPage h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: seashell;
+    letter-spacing: 1rem; }
+#searchBox{
+  padding: .8rem;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+}
+#searchBox:hover{
+  box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.3); 
+}
+#searchBox:focus{
+  box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.3); 
+}
+.search__Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+#category{
+  padding: .8rem;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+  margin: 0;
+  display: inline;
+}
+.header__container{
+  padding: 1rem;
+  margin: 1rem;
+}

@@ -1,0 +1,49 @@
+.footer {
+  padding: 5rem 5rem;
+  background-color: $color-primary;
+  &__container {
+    display: flex;
+    justify-content: space-around;
+
+    &__card {
+      font-size: 2rem;
+      ul {
+        list-style: none;
+        font-size: 1.5rem;
+
+        li {
+          margin-top: 1rem;
+
+          a {
+            text-decoration: none;
+            color: $color-grey-light-1;
+          }
+        }
+      }
+
+      &--logoBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  &__img {
+    height: 15rem;
+  }
+
+  &__logo {
+    font-size: 2rem;
+    margin: 0 1.5rem;
+    padding: 0.8rem;
+    border-radius: 100%;
+    background-color: white;
+    color: $color-primary;
+    transition: all 0.7s;
+    &:hover {
+      background-color: $color-primary;
+      color: white;
+    }
+  }
+}

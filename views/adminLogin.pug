@@ -1,0 +1,18 @@
+doctype html
+head
+  link(rel='stylesheet' href='css/style.css')
+.loginPage
+  .loginPage--container
+    h1 ADMIN LOGIN
+    form.form.loginForm
+      .form__group
+        label(for='name') Email
+        input#email(type='text' autocomplete="off")
+      .form__group
+        label(for='price') Password
+        input#password(type='password' minlength='8' autocomplete="off")
+      .form__group
+        button.btn Login
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js')
+  script(src='/js/login.js')
+  script(src='/js/alert.js')

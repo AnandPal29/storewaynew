@@ -1,0 +1,67 @@
+.form {
+  background-color: $color-grey-light-1;
+  padding: 3rem;
+  margin: 10rem;
+  box-shadow: 2px 2px 7px $color-grey-dark-1;
+  border-radius: 5px;
+  font-size: 1.4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__controller {
+    margin: 2rem;
+
+    p {
+      color: $color-primary;
+
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+    }
+    input {
+      height: 3rem;
+      width: 25rem;
+      padding: 1rem;
+      border: none;
+      font-size: 1.6rem;
+      color: $color-grey-dark-1;
+
+      &:active,
+      &:focus {
+        outline: none;
+        border-bottom: 3px solid $color-primary;
+      }
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: $color-primary;
+    padding: 1rem;
+    color: white;
+    border-radius: 5px;
+
+    &:active,
+    &:focus {
+      cursor: pointer;
+      outline: none;
+      transform: translateY(2px);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__logo {
+    font-size: 5rem;
+    color: white;
+    background-color: $color-primary;
+    padding: 3rem;
+    border-radius: 100%;
+    border: 3px solid white;
+    margin-top: -8rem;
+    box-shadow: 2px 2px 5px $color-grey-dark-1;
+  }
+}
