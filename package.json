@@ -4,11 +4,7 @@
   "description": "Landing Page for natours",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "compile:sass": "node-sass sass/main.scss css/style.css",
-    "devserver": "live-server",
-    "start:prod": "set NODE_ENV=production && nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Anand",
   "license": "ISC",
